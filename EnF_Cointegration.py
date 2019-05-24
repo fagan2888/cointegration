@@ -63,6 +63,10 @@ res = bt.run(t)
 print('\n', res.display())
 
 
-file_dst = sys.path[0] + '/result/EnF-%s.pkl' % datetime.datetime.now()
+now = datetime.datetime.now()
+file_dst = sys.path[0] + '/result/EnF-%s.pkl' % now
 with open(file_dst, 'wb') as f:
     pickle.dump(res, f, protocol=pickle.HIGHEST_PROTOCOL)
+file_dst = sys.path[0] + '/trade/EnF-%s.pkl' % now
+with open(file_dst, 'wb') as f:
+    pickle.dump(t, f, protocol=pickle.HIGHEST_PROTOCOL)
