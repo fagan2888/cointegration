@@ -1,6 +1,7 @@
 bt
-datetime
 numpy
 pandas
+scipy
+datetime
 matplotlib
 statsmodels
