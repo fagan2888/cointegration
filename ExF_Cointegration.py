@@ -30,7 +30,7 @@ start_date = '1990-01-01'
 
 
 dfList = []
-for file in glob.glob(sys.path[0] + '/*.csv'):
+for file in glob.glob(sys.path[0] + '/dataset/*.csv'):
     tmp = pd.read_csv(file, index_col=0)[['Value_Close']]
     tmp.rename(columns={'Value_Close': file.split('-')[0].split('/')[-1]}, inplace=True)
     tmp.index = pd.to_datetime(tmp.index)
